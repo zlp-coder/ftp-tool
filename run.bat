@@ -1,0 +1,1 @@
+%cd%/env/Scripts/python mainapplication.py

@@ -1,0 +1,81 @@
+{
+   "id" : "Demo01",
+   "address" : "演示连接192.168.25.26",
+   "runReboot" : "false",
+   "runReboottime" : "",
+   "runRebootDuring" : "",
+   "runRebootDuringHours" : "",
+   "runRebootOnError" : "",
+   "runRebootOnErrorList" : "",
+   "statusReport" : "300",
+   "statusReportLastTime" : "",
+   "ftpList" : [
+      {
+         "ftpId" : "9f2d1b60-42d1-4b59-95e0-c6b54f1a6f96",
+         "ftpType" : "ftpport",
+         "ftpHost" : "127.0.0.1",
+         "ftpPort" : "21",
+         "ftpUser" : "root",
+         "ftpPsw" : "111111",
+         "usingPool" : "true",
+         "upload" : [
+            {
+               "localPath" : "d:\\temp",
+               "srvPath" : "/yict01",
+               "bakPath" : "d:\\back"
+            }
+         ],
+         "download" : [
+            {
+               "localPath" : "d:\\download",
+               "srvPath" : "/yict02"
+            }
+         ]
+      }
+   ],
+   "uploadtask" : [
+      {
+         "seq" : "21935ebd-0c48-477b-a5d6-4bb9af8dfa06",
+         "order" : "10",
+         "taskName" : "演示上传任务配置",
+         "taskDesc" : "这是演示数据，请使用前删除或变更为正式配置",
+         "localPath" : "d:\\temp",
+         "filterFilename" : "",
+         "filterContent" : "",
+         "srvPath" : "/temp",
+         "bakPath" : "d:\\back",
+         "afterOprt" : "cc",
+         "ccsrvPath" : "/temp001",
+         "status" : "1",
+         "ftpId" : "9f2d1b60-42d1-4b59-95e0-c6b54f1a6f96",
+         "ftpIdDisp" : "",
+         "transFiles" : "10000",
+         "transRun" : "60",
+         "isPsd" : "1",
+         "runningState" : "等候",
+         "lastDate" : ""
+      }
+   ],
+   "downloadtask" : [
+      {
+         "seq" : "7022e37e-4ea3-4079-939a-ce28078a013d",
+         "order" : "10",
+         "taskName" : "演示下载任务配置",
+         "taskDesc" : "这是演示数据，请使用前删除或变更为正式配置",
+         "srvPath" : "/down",
+         "filterFilename" : "",
+         "filterContent" : "",
+         "localPath" : "d:\\download",
+         "afterOprt" : "cc|temp",
+         "ccsrvPath" : "/download2",
+         "tempsrvPath" : "d:\\download2",
+         "status" : "1",
+         "ftpId" : "9f2d1b60-42d1-4b59-95e0-c6b54f1a6f96",
+         "ftpIdDisp" : "",
+         "transFiles" : "10000",
+         "transRun" : "60",
+         "runningState" : "等候",
+         "lastDate" : ""
+      }
+   ]
+}

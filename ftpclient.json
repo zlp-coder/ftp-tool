@@ -1,0 +1,77 @@
+{
+   "id" : "1232131654唯一编号，在服务端备案",
+   "address" : "盐田码头192.168.25.26",
+   "runReboot" : "定期重启，默认false",
+   "runReboottime" : "小时，hh24:mm:ss格式",
+   "runRebootDuring" : "定长重启，默认false",
+   "runRebootDuringHours" : "运行多长重启默认10",
+   "runRebootOnError" : "异常重启，默认false",
+   "runRebootOnErrorList" : "Error异常内容正则表达式",
+   "statusReport" : "生成状态报文的时间间隔，默认300秒",
+   "statusReportLastTime" : "最后一次状态报文的时间",
+   "ftpList" : [
+      {
+         "ftpId" : "ftp服务器Id，自动维护，唯一",
+         "ftpType" : "ftp-port ftp-pasv or sftp",
+         "ftpHost" : "FTP或者SFTP的地址",
+         "ftpPort" : "ftp端口号，默认21",
+         "ftpUser" : "ftp用户名",
+         "ftpPsw" : "ftp密码",
+         "usingPool" : "true 是否启用连接池",
+         "upload" : [
+            {
+               "localPath" : "本地目录",
+               "srvPath" : "服务器目录",
+               "bakPath" : "备份目录"
+            }
+         ],
+         "download" : [
+            {
+               "localPath" : "本地目录",
+               "srvPath" : "服务器目录"
+            }
+         ]
+      }
+   ],
+   "uploadtask" : [
+      {
+         "order" : "序号,执行顺序，序号大的优先执行",
+         "taskName" : "任务名称",
+         "taskDesc" : "任务备注",
+         "localPath" : "本地目录",
+         "filterFilename" : "文件名过滤，正则。空值表示忽略",
+         "filterContent" : "内容过滤，正则，空值表示忽略",
+         "srvPath" : "服务器目录 \r\n",
+         "bakPath" : "备份目录",
+         "afterOprt" : "后续处理，no-不做动作，cc-抄送",
+         "ccsrvPath" : "抄送服务器目录",
+         "status" : "1=启用 -1=停用",
+         "ftpId" : "FTP序号",
+         "transFiles" : "传输频率，默认10000",
+         "transRun" : "间隔周期，默认60 s",
+         "isPsd" : "是否是状态报文通道",
+         "runningState" : "运行状态，",
+         "lastDate" : "最后运行时间"
+      }
+   ],
+   "downloadtask" : [
+      {
+         "order" : "序号,执行顺序，序号大的优先执行",
+         "taskName" : "任务名称",
+         "taskDesc" : "任务备注",
+         "srvPath" : "服务器目录",
+         "filterFilename" : "文件名过滤，正则。空值表示忽略",
+         "filterContent" : "内容过滤，正则，空值表示忽略",
+         "localPath" : "本地目录",
+         "afterOprt" : "后续处理，no-不做动作，cc-抄送，temp-中转，默认no",
+         "ccsrvPath" : "抄送本地目录",
+         "tempsrvPath" : "中转，本地中转目录",
+         "status" : "1=启用 -1=停用",
+         "ftpId" : "FTP序号",
+         "transFiles" : "传输频率，默认10000",
+         "transRun" : "间隔周期，默认60 s",
+         "runningState" : "运行状态，",
+         "lastDate" : "最后运行时间"
+      }
+   ]
+}

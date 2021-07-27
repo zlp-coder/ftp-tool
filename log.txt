@@ -1,0 +1,6 @@
+[2021-07-27 15:34:43,173]:INFO:Connected (version 2.0, client OpenSSH_7.4)
+[2021-07-27 15:34:43,273]:INFO:Authentication (password) successful!
+[2021-07-27 15:34:43,707]:INFO:[chan 0] Opened sftp connection (server version 3)
+[2021-07-27 15:34:43,720]:INFO:Connected (version 2.0, client OpenSSH_7.4)
+[2021-07-27 15:34:43,819]:INFO:Authentication (password) successful!
+[2021-07-27 15:34:44,255]:INFO:[chan 0] Opened sftp connection (server version 3)
